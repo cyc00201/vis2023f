@@ -72,26 +72,38 @@ a4 = createArray(5);
 
 a3[0] = ['序號', '班級', '學號', '姓名', 'GitHub', '作業一', '作業二', '作業三', '作業四', '作業五', '作業六', '作業七', '作業八', '作業九', '作業十']
 a4 = ['資工系','資工所','電資AI','電資資安','創新AI']
+
 for (var i = 1; i < a3.length; i++) {
 a3[i][0] = i;
 index = Math.floor(Math.random() * 5) 
 a3[i][1] = a4[index];
-a3[i][2] = 112598000 + Math.floor(Math.random() * 999);
+		number = Math.floor(Math.random() * 999)
+		if(index == 0)
+			a3[i][2] = "111590" + number.toString();
+		if(index == 1)
+			a3[i][2] = "111598" + number.toString();
+		if(index == 2)
+			a3[i][2] = "112C52" + number.toString();
+		if(index == 3)
+			a3[i][2] = "112C53" + number.toString();
+		if(index == 4)
+			a3[i][2] = "112C71" + number.toString();
+	
 //a3[i][1] = '路人甲'; // 4E00-9FFF
 //a3[i][1] = String.fromCharCode(0x6771);
-a3[i][3] = String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00)) +
-String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00)) +
-String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00));
+	a3[i][3] = String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00)) +
+	String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00)) +
+	String.fromCharCode(Math.floor(Math.random() * 0x51ff + 0x4e00));
 //a3[i][2] = 'github';
 // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 // Math.random() 會回傳一個偽隨機小數 (pseudo-random) 介於 0 到 1 之間(包含 0，不包含 1)
 // str.substring(indexStart[, indexEnd])
 // number.toString(radix) 10個數字 + 26個英文字母 = 36
-a3[i][4] = (Math.random() + 1).toString(36).substring(2);
+	a3[i][4] = (Math.random() + 1).toString(36).substring(2);
 
-for (var j = 5; j < a3[0].length; j++) {
-a3[i][j] = Math.floor(Math.random() * 10);
-}
+	for (var j = 5; j < a3[0].length; j++) {
+	a3[i][j] = Math.floor(Math.random() * 10);
+	}
 }
 //alert(a3);
 
