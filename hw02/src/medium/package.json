@@ -1,0 +1,14 @@
+{
+  "name": "1c5a0b0564092195",
+  "main": "1c5a0b0564092195@26.js",
+  "version": "26.0.0",
+  "homepage": "https://observablehq.com/d/1c5a0b0564092195",
+  "author": {
+    "name": "北科大-李映廷's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-li-ying-ting-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
