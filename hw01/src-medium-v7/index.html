@@ -196,16 +196,15 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
             .attr("height", (d,i) => { return (i + 1) * 60; });
 
 
-    d3.text("data.csv").then (data) => {
 
-        //var parsedCSV = d3.csv.parseRows(data);
-        parsedCSV = d3.csv.parseRows(data);
-        //console.log(parsedCSV);
-
-        var container = d3.select("#div2")
+	d3.text("data.csv").then((data) => {
+		
+		parseCSV = d3.csvParseRows(data)
+		console.log(parseCSV);
+		var container = d3.select("#div2")
             .append("table")
             .selectAll("tr")
-            .data(parsedCSV)
+            .data(parseCSV)
             .enter()
             .append("tr")
             .selectAll("td")
@@ -255,9 +254,9 @@ https://www.oxxostudio.tw/articles/201501/svg-d3-13-csv.html
             .attr("width", 50)
             .attr("height", 50)
             ;
-    });
-
-      
+	});
+	
+   
     </script>
 </body>
 
