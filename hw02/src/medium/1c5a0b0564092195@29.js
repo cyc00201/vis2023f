@@ -1,5 +1,5 @@
 function _data(FileAttachment){return(
-FileAttachment("data.json").json()
+FileAttachment("../data.json").json()
 )}
 
 function _yCounts(){return(
