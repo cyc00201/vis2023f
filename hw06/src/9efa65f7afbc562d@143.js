@@ -54,6 +54,10 @@ function _selectedSeries(Inputs){return(
 Inputs.checkbox(["artist", "artistpublic"], {label: "Choose datasets", value: ["artist", "artistpublic"]})
 )}
 
+function _12(md){return(
+md`從1到5級距，您認為藝術產業的碳排放量在那個相對位置？`
+)}
+
 function _11(Plot,data,selectedSeries){return(
 Plot.plot({
   color: {
@@ -354,6 +358,7 @@ export default function define(runtime, observer) {
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
+  main.variable(observer()).define(["md"], _12);
   main.variable(observer("artist")).define("artist", ["FileAttachment"], _artist);
   main.variable(observer("artistpublic")).define("artistpublic", ["FileAttachment"], _artistpublic);
   main.variable(observer("AQ3key")).define("AQ3key", ["artist"], _AQ3key);
