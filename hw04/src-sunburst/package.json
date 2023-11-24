@@ -1,0 +1,14 @@
+{
+  "name": "903acc27040d75cf",
+  "main": "903acc27040d75cf@239.js",
+  "version": "239.0.0",
+  "homepage": "https://observablehq.com/d/903acc27040d75cf",
+  "author": {
+    "name": "北科大-李映廷's Workspace",
+    "url": "https://observablehq.com/@bei-ke-da-li-ying-ting-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
